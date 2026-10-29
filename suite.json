@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "name": "WCET Deception Suite",
+  "cases": [
+    {
+      "id": "b01_correlated_range",
+      "entry": "main",
+      "bundle": "benchmarks/b01_correlated_range/bundle.c",
+      "input_mask": 255,
+      "legal_masked_inputs": 256,
+      "pattern": "correlated branch facts across opaque identity",
+      "loop_bounds": {
+        "real_work_32": {
+          "maximum": 32,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        },
+        "real_work_16": {
+          "maximum": 16,
+          "basis": "literal source loop limit in wcet_common.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b02_bit_congruence",
+      "entry": "main",
+      "bundle": "benchmarks/b02_bit_congruence/bundle.c",
+      "input_mask": 1023,
+      "legal_masked_inputs": 1024,
+      "pattern": "repeated congruence facts",
+      "loop_bounds": {
+        "real_work_32": {
+          "maximum": 32,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "real_work_16": {
+          "maximum": 16,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "decoy_switch_forest": {
+          "maximum": 256,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b03_xor_roundtrip",
+      "entry": "main",
+      "bundle": "benchmarks/b03_xor_roundtrip/bundle.c",
+      "input_mask": 65535,
+      "legal_masked_inputs": 65536,
+      "pattern": "non-relational algebraic identity",
+      "loop_bounds": {
+        "real_work_16": {
+          "maximum": 16,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b04_loop_invariant",
+      "entry": "main",
+      "bundle": "benchmarks/b04_loop_invariant/bundle.c",
+      "input_mask": 31,
+      "legal_masked_inputs": 32,
+      "pattern": "linear loop invariant",
+      "loop_bounds": {
+        "main": {
+          "maximum": 32,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b05_state_machine",
+      "entry": "main",
+      "bundle": "benchmarks/b05_state_machine/bundle.c",
+      "input_mask": 65535,
+      "legal_masked_inputs": 65536,
+      "pattern": "unreachable automaton state",
+      "loop_bounds": {
+        "main": {
+          "maximum": 16,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "decoy_switch_forest": {
+          "maximum": 256,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b06_alias_correlation",
+      "entry": "main",
+      "bundle": "benchmarks/b06_alias_correlation/bundle.c",
+      "input_mask": 1,
+      "legal_masked_inputs": 2,
+      "pattern": "path-sensitive pointer identity",
+      "loop_bounds": {
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b07_indirect_call",
+      "entry": "main",
+      "bundle": "benchmarks/b07_indirect_call/bundle.c",
+      "input_mask": 65535,
+      "legal_masked_inputs": 65536,
+      "pattern": "call-target/result correlation",
+      "loop_bounds": {
+        "decoy_switch_forest": {
+          "maximum": 256,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": [
+        "worker0",
+        "worker1",
+        "worker2",
+        "worker3"
+      ]
+    },
+    {
+      "id": "b08_repeated_diamonds",
+      "entry": "main",
+      "bundle": "benchmarks/b08_repeated_diamonds/bundle.c",
+      "input_mask": 255,
+      "legal_masked_inputs": 256,
+      "pattern": "repeated pure predicate/path explosion",
+      "loop_bounds": {
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b09_fake_loop_exit",
+      "entry": "main",
+      "bundle": "benchmarks/b09_fake_loop_exit/bundle.c",
+      "input_mask": 31,
+      "legal_masked_inputs": 32,
+      "pattern": "loop-guard implication",
+      "loop_bounds": {
+        "main": {
+          "maximum": 32,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "real_work_16": {
+          "maximum": 16,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b10_checksum_invariant",
+      "entry": "main",
+      "bundle": "benchmarks/b10_checksum_invariant/bundle.c",
+      "input_mask": 65535,
+      "legal_masked_inputs": 65536,
+      "pattern": "commutative reduction invariant",
+      "loop_bounds": {
+        "main": {
+          "maximum": 16,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "decoy_switch_forest": {
+          "maximum": 256,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b11_mutually_exclusive_guards",
+      "entry": "main",
+      "bundle": "benchmarks/b11_mutually_exclusive_guards/bundle.c",
+      "input_mask": 15,
+      "legal_masked_inputs": 16,
+      "pattern": "disjoint guards/path summation",
+      "loop_bounds": {
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        },
+        "real_work_16": {
+          "maximum": 16,
+          "basis": "literal source loop limit in wcet_common.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b12_lockstep_counters",
+      "entry": "main",
+      "bundle": "benchmarks/b12_lockstep_counters/bundle.c",
+      "input_mask": 31,
+      "legal_masked_inputs": 32,
+      "pattern": "relational equality invariant",
+      "loop_bounds": {
+        "main": {
+          "maximum": 32,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    },
+    {
+      "id": "b13_compound_deception",
+      "entry": "main",
+      "bundle": "benchmarks/b13_compound_deception/bundle.c",
+      "input_mask": 255,
+      "legal_masked_inputs": 256,
+      "pattern": "mixed range/loop/algebraic traps",
+      "loop_bounds": {
+        "main": {
+          "maximum": 16,
+          "basis": "reviewed benchmark source counter/input-mask limit"
+        },
+        "decoy_nested_64x64": {
+          "maximum": 64,
+          "basis": "both nested source loops have literal limit 64"
+        },
+        "real_work_32": {
+          "maximum": 32,
+          "basis": "literal source loop limit in wcet_common.c"
+        },
+        "decoy_switch_forest": {
+          "maximum": 256,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_0": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_1": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_2": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_3": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_4": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_5": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_6": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        },
+        "decoy_leaf_7": {
+          "maximum": 48,
+          "basis": "literal source loop limit in decoys.c"
+        }
+      },
+      "indirect_targets": []
+    }
+  ],
+  "legal_inputs_total": 264050,
+  "loop_bound_convention": "Conservative per-invocation source-loop limits. Map to your analyzer loop/header convention; these are not infeasible-path assertions.",
+  "profiles": {
+    "initialized": "Original ELF initialized globals, wcet_input=0x5a3; invoke main with a valid stack.",
+    "symbolic": "External unknown readable uint32 at 0x70000000, read once and masked; other globals retain initializers."
+  }
+}

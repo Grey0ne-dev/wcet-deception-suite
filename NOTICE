@@ -1,0 +1,6 @@
+WCET Deception Suite
+Published by Grey0ne-dev under the Apache License, Version 2.0.
+
+The 104 recovered C/header/linker/manifest source files are preserved byte for byte.
+Their original SHA-256 hashes are recorded in benchmarks/SHA256SUMS.
+The analyzer-neutral build and validation tools are distributed with this release.

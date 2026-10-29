@@ -1,0 +1,14 @@
+benchmark,primary_pattern,maximum_real_loop_bound,infeasible_decoy
+b01_correlated_range,correlated branch facts across opaque identity,32,x<128 with copy>=128 or converse
+b02_bit_congruence,repeated congruence facts,32,x mod 8 simultaneously equals 3 and 5
+b03_xor_roundtrip,non-relational algebraic identity,16,double XOR does not recover input
+b04_loop_invariant,linear loop invariant,32,sum differs from 3*n after n increments
+b05_state_machine,unreachable automaton state,16,state 7 reached from closed state set 0..3
+b06_alias_correlation,path-sensitive pointer identity,0,selector and selected buffer disagree
+b07_indirect_call,call-target/result correlation,32,worker result tag differs from selected key
+b08_repeated_diamonds,repeated pure predicate/path explosion,0,same deterministic predicate returns both true and false
+b09_fake_loop_exit,loop-guard implication,32,n<=i while loop guard establishes i<n
+b10_checksum_invariant,commutative reduction invariant,16,forward and reverse XOR differ
+b11_mutually_exclusive_guards,disjoint guards/path summation,16,zero or multiple equalities match one fixed key
+b12_lockstep_counters,relational equality invariant,32,equally initialized/equally updated counters differ
+b13_compound_deception,mixed range/loop/algebraic traps,32,multiple independent infeasible regions

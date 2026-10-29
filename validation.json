@@ -1,0 +1,1188 @@
+{
+  "date": "2026-10-29",
+  "source_files_verified": 104,
+  "modified_source_rejected": true,
+  "runs": [
+    {
+      "command": "native",
+      "cpu": "native host",
+      "profile": "all legal masked inputs",
+      "compiler": "cc (GCC) 16.2.1 20260810",
+      "cases": 13,
+      "legal_inputs_checked": 264050,
+      "results": [
+        {
+          "case": "b01_correlated_range",
+          "status": "passed",
+          "inputs": 256,
+          "output": "256 legal masked inputs passed"
+        },
+        {
+          "case": "b02_bit_congruence",
+          "status": "passed",
+          "inputs": 1024,
+          "output": "1024 legal masked inputs passed"
+        },
+        {
+          "case": "b03_xor_roundtrip",
+          "status": "passed",
+          "inputs": 65536,
+          "output": "65536 legal masked inputs passed"
+        },
+        {
+          "case": "b04_loop_invariant",
+          "status": "passed",
+          "inputs": 32,
+          "output": "32 legal masked inputs passed"
+        },
+        {
+          "case": "b05_state_machine",
+          "status": "passed",
+          "inputs": 65536,
+          "output": "65536 legal masked inputs passed"
+        },
+        {
+          "case": "b06_alias_correlation",
+          "status": "passed",
+          "inputs": 2,
+          "output": "2 legal masked inputs passed"
+        },
+        {
+          "case": "b07_indirect_call",
+          "status": "passed",
+          "inputs": 65536,
+          "output": "65536 legal masked inputs passed"
+        },
+        {
+          "case": "b08_repeated_diamonds",
+          "status": "passed",
+          "inputs": 256,
+          "output": "256 legal masked inputs passed"
+        },
+        {
+          "case": "b09_fake_loop_exit",
+          "status": "passed",
+          "inputs": 32,
+          "output": "32 legal masked inputs passed"
+        },
+        {
+          "case": "b10_checksum_invariant",
+          "status": "passed",
+          "inputs": 65536,
+          "output": "65536 legal masked inputs passed"
+        },
+        {
+          "case": "b11_mutually_exclusive_guards",
+          "status": "passed",
+          "inputs": 16,
+          "output": "16 legal masked inputs passed"
+        },
+        {
+          "case": "b12_lockstep_counters",
+          "status": "passed",
+          "inputs": 32,
+          "output": "32 legal masked inputs passed"
+        },
+        {
+          "case": "b13_compound_deception",
+          "status": "passed",
+          "inputs": 256,
+          "output": "256 legal masked inputs passed"
+        }
+      ]
+    },
+    {
+      "command": "build",
+      "cpu": "cortex-m4",
+      "profile": "symbolic",
+      "compiler": "arm-none-eabi-gcc (15:9-2019-q4-0ubuntu1) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]",
+      "cases": 13,
+      "legal_inputs_checked": 0,
+      "results": [
+        {
+          "case": "b01_correlated_range",
+          "status": "built",
+          "binary": "b01_correlated_range/b01_correlated_range.elf",
+          "sha256": "053ddab02a1f2844a6b03642e7a679c6043ff53e0e156ba4f51d53f15486b677",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b02_bit_congruence",
+          "status": "built",
+          "binary": "b02_bit_congruence/b02_bit_congruence.elf",
+          "sha256": "598339f782552c076b85dd62865bf013a6b80924f25265ddfffd4e5f8ea62a7d",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b03_xor_roundtrip",
+          "status": "built",
+          "binary": "b03_xor_roundtrip/b03_xor_roundtrip.elf",
+          "sha256": "d327e044745bbcc82705a353935b14c4fde9b7fe111d0c2a96fb3909cbd0dfb2",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b04_loop_invariant",
+          "status": "built",
+          "binary": "b04_loop_invariant/b04_loop_invariant.elf",
+          "sha256": "5fa9decc8a258a250f419ff6af3ac4439c26984466c2f29d22d64ea6e1951783",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b05_state_machine",
+          "status": "built",
+          "binary": "b05_state_machine/b05_state_machine.elf",
+          "sha256": "4032ed9f52de7b927cb88b8b1296123d86e9286d09b3dcfa4a09a4f9168fbbb6",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b06_alias_correlation",
+          "status": "built",
+          "binary": "b06_alias_correlation/b06_alias_correlation.elf",
+          "sha256": "514cbac93aa6806326621fdbd96980cb243f373d79e2c03311f153794ae075c7",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b07_indirect_call",
+          "status": "built",
+          "binary": "b07_indirect_call/b07_indirect_call.elf",
+          "sha256": "a656625e5068f09f7aaa60ff39e256f1685f209938f0178f8dad2226a75594db",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b08_repeated_diamonds",
+          "status": "built",
+          "binary": "b08_repeated_diamonds/b08_repeated_diamonds.elf",
+          "sha256": "09e942ca7d244597080226f89598b1b98c4a4bd2f6272b9961fdde0a298a6768",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b09_fake_loop_exit",
+          "status": "built",
+          "binary": "b09_fake_loop_exit/b09_fake_loop_exit.elf",
+          "sha256": "0b791468f827e73bac46161a4fc9de4d5382d470a3d87e2786ba2009dac984e7",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b10_checksum_invariant",
+          "status": "built",
+          "binary": "b10_checksum_invariant/b10_checksum_invariant.elf",
+          "sha256": "3f290df75c7a49a0639d207f5e5d6445328af05570f43609a9fc6662514fe52b",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b11_mutually_exclusive_guards",
+          "status": "built",
+          "binary": "b11_mutually_exclusive_guards/b11_mutually_exclusive_guards.elf",
+          "sha256": "62791b9e593114d8aac0368f54f073675eb4dbf3724c942abc1ba45285efd938",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b12_lockstep_counters",
+          "status": "built",
+          "binary": "b12_lockstep_counters/b12_lockstep_counters.elf",
+          "sha256": "f63530bf7f57950f8c58f3eae0dc361ac8b91e1e984163a9d2104e000a62068f",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        },
+        {
+          "case": "b13_compound_deception",
+          "status": "built",
+          "binary": "b13_compound_deception/b13_compound_deception.elf",
+          "sha256": "b08e04f137ed1ff06b371334cea65bd61a6d917d9dec90e3f46bcf40a7880947",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables",
+            "-Wl,--defsym=wcet_input=0x70000000"
+          ]
+        }
+      ]
+    },
+    {
+      "command": "build",
+      "cpu": "cortex-m0",
+      "profile": "initialized",
+      "compiler": "arm-none-eabi-gcc (15:9-2019-q4-0ubuntu1) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]",
+      "cases": 13,
+      "legal_inputs_checked": 0,
+      "results": [
+        {
+          "case": "b01_correlated_range",
+          "status": "built",
+          "binary": "b01_correlated_range/b01_correlated_range.elf",
+          "sha256": "bb55ddea7a157f908974bdb604ae43b4862657e6a268f5e5466e589e20ae61e4",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b02_bit_congruence",
+          "status": "built",
+          "binary": "b02_bit_congruence/b02_bit_congruence.elf",
+          "sha256": "2088d3513e95c81c6f027e318395590ab5b319b9e51a3d26b5b523a1a3544c94",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b03_xor_roundtrip",
+          "status": "built",
+          "binary": "b03_xor_roundtrip/b03_xor_roundtrip.elf",
+          "sha256": "a390f340257475677507fca599228bfbb61489f375b50776f1987a61b56946ef",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b04_loop_invariant",
+          "status": "built",
+          "binary": "b04_loop_invariant/b04_loop_invariant.elf",
+          "sha256": "63c5e76adf866b2129fc301af44e7de6cd40101205c525b501d49197648e4e85",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b05_state_machine",
+          "status": "built",
+          "binary": "b05_state_machine/b05_state_machine.elf",
+          "sha256": "6cbff5cceaee2e3112e84221e95024c946e933880cfcfc6dc616ad18e0816714",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b06_alias_correlation",
+          "status": "built",
+          "binary": "b06_alias_correlation/b06_alias_correlation.elf",
+          "sha256": "2f57531f15460910475e4a1b8712992bb03547ce66318f5aaac5529b88cef60c",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b07_indirect_call",
+          "status": "built",
+          "binary": "b07_indirect_call/b07_indirect_call.elf",
+          "sha256": "a2609a41a0855465ab13fb4cba11979f1ad52110da864254fb5e64cf812ca3b5",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b08_repeated_diamonds",
+          "status": "built",
+          "binary": "b08_repeated_diamonds/b08_repeated_diamonds.elf",
+          "sha256": "dd9a4c621a15f5cf078c140e95aa3c7d4089bf5d0b5cdb710f73c7f436ff46e7",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b09_fake_loop_exit",
+          "status": "built",
+          "binary": "b09_fake_loop_exit/b09_fake_loop_exit.elf",
+          "sha256": "aef131dcbe77cd40be267a66a5d5b2e6e8bdeba1d571a2f2f2db470cf8110a66",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b10_checksum_invariant",
+          "status": "built",
+          "binary": "b10_checksum_invariant/b10_checksum_invariant.elf",
+          "sha256": "04f1d6e67b6c1ccc902975be6684de008f5ed26fb2534806de879d1b87b8974c",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b11_mutually_exclusive_guards",
+          "status": "built",
+          "binary": "b11_mutually_exclusive_guards/b11_mutually_exclusive_guards.elf",
+          "sha256": "5968177e3356e9d452469458cd5bbff0f7e21010b4abaeb0f03bdd391e456ad7",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b12_lockstep_counters",
+          "status": "built",
+          "binary": "b12_lockstep_counters/b12_lockstep_counters.elf",
+          "sha256": "710088dfc2a2cf067d82b2142502706914b413385347e92b65ab1d558eb88552",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b13_compound_deception",
+          "status": "built",
+          "binary": "b13_compound_deception/b13_compound_deception.elf",
+          "sha256": "c5c5ee3c519f8b18f9f1ab8f2ff25d730437152cae6dec9add9e3d18923e4473",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m0",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        }
+      ]
+    },
+    {
+      "command": "build",
+      "cpu": "cortex-m3",
+      "profile": "initialized",
+      "compiler": "arm-none-eabi-gcc (15:9-2019-q4-0ubuntu1) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]",
+      "cases": 13,
+      "legal_inputs_checked": 0,
+      "results": [
+        {
+          "case": "b01_correlated_range",
+          "status": "built",
+          "binary": "b01_correlated_range/b01_correlated_range.elf",
+          "sha256": "bf7fb71b3057a9cc448a7419d63c43d8d3806a8f75a0572df2e1d937c9d528fc",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b02_bit_congruence",
+          "status": "built",
+          "binary": "b02_bit_congruence/b02_bit_congruence.elf",
+          "sha256": "50cab772043e9d74d4f98c2086a6ad48b69a5ea6130d2ec233bf8429dc02e78a",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b03_xor_roundtrip",
+          "status": "built",
+          "binary": "b03_xor_roundtrip/b03_xor_roundtrip.elf",
+          "sha256": "f8018f0c41f98eebf9449779bd888fc7373f74e08156f5e73b91061ff11ead6d",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b04_loop_invariant",
+          "status": "built",
+          "binary": "b04_loop_invariant/b04_loop_invariant.elf",
+          "sha256": "2c7f0a573ff04cc8ccf0a095b2e670f7785e722a27f52f35a379865737ac0b92",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b05_state_machine",
+          "status": "built",
+          "binary": "b05_state_machine/b05_state_machine.elf",
+          "sha256": "49ab83cdf46e3c4632b872c241b9fbb1fce3b9c116657910d0c122fa6a8e9f23",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b06_alias_correlation",
+          "status": "built",
+          "binary": "b06_alias_correlation/b06_alias_correlation.elf",
+          "sha256": "abb42b354a8a15b7ae53d11f823376871048b07c5806af87098473a13bf98b35",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b07_indirect_call",
+          "status": "built",
+          "binary": "b07_indirect_call/b07_indirect_call.elf",
+          "sha256": "3e4b5bfd9210ec032f3d097fc76592eb6af923d1c5d33cdce2f317c93e091615",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b08_repeated_diamonds",
+          "status": "built",
+          "binary": "b08_repeated_diamonds/b08_repeated_diamonds.elf",
+          "sha256": "5ad9250f1f804ea164334773fe3ff1c58b6b3745fbe9926a60c7f901cf46bb23",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b09_fake_loop_exit",
+          "status": "built",
+          "binary": "b09_fake_loop_exit/b09_fake_loop_exit.elf",
+          "sha256": "6ee42fd3cc5ff59c51d6285eb658ff040fdde149a078e6702e4936e151e62e71",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b10_checksum_invariant",
+          "status": "built",
+          "binary": "b10_checksum_invariant/b10_checksum_invariant.elf",
+          "sha256": "78a532f81f42a75c7b32562c7747ed90074319bcb9bec36f84ab8f0ddb6eb151",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b11_mutually_exclusive_guards",
+          "status": "built",
+          "binary": "b11_mutually_exclusive_guards/b11_mutually_exclusive_guards.elf",
+          "sha256": "eb3cedd5b9ffe5b830694797c582bf739ddbb121da0c94dc4b19675fe5eb6348",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b12_lockstep_counters",
+          "status": "built",
+          "binary": "b12_lockstep_counters/b12_lockstep_counters.elf",
+          "sha256": "45a84d2bb4b158b93fec361883513a808b111e247c88263689b3bc86ddaa7028",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b13_compound_deception",
+          "status": "built",
+          "binary": "b13_compound_deception/b13_compound_deception.elf",
+          "sha256": "4f481f3941dfed43a2cab2d578ff2cd5e59a5c14cde0c4367c1ecdabb865e4e0",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=cortex-m3",
+            "-mthumb",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        }
+      ]
+    },
+    {
+      "command": "build",
+      "cpu": "arm7tdmi",
+      "profile": "initialized",
+      "compiler": "arm-none-eabi-gcc (15:9-2019-q4-0ubuntu1) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]",
+      "cases": 13,
+      "legal_inputs_checked": 0,
+      "results": [
+        {
+          "case": "b01_correlated_range",
+          "status": "built",
+          "binary": "b01_correlated_range/b01_correlated_range.elf",
+          "sha256": "c649a50103b947a7cfa730d456eb9cb785ef8fb1db87f57f86b691d3d53536ad",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b02_bit_congruence",
+          "status": "built",
+          "binary": "b02_bit_congruence/b02_bit_congruence.elf",
+          "sha256": "01e4c84381ba3c867f3a280fe95303de9583e17fd231614f5a5f0b4f401174ef",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b03_xor_roundtrip",
+          "status": "built",
+          "binary": "b03_xor_roundtrip/b03_xor_roundtrip.elf",
+          "sha256": "08a8d2c4c5a044c35b7c220976e4789f50fe62bdfcf78371c1019c51c6954ca4",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b04_loop_invariant",
+          "status": "built",
+          "binary": "b04_loop_invariant/b04_loop_invariant.elf",
+          "sha256": "c7aeafdd30eb15c8d7cdc1dd3450387a39d94a0119d21fbc3da9255f1208aead",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b05_state_machine",
+          "status": "built",
+          "binary": "b05_state_machine/b05_state_machine.elf",
+          "sha256": "6fba30638348b3ad33202f2d07f5cc26a4206cf2be076c769df9652bf673d427",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b06_alias_correlation",
+          "status": "built",
+          "binary": "b06_alias_correlation/b06_alias_correlation.elf",
+          "sha256": "045b9320d5674298fb59053e823e6fbefbf9dd0eec8334080bc64499b50573ab",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b07_indirect_call",
+          "status": "built",
+          "binary": "b07_indirect_call/b07_indirect_call.elf",
+          "sha256": "6ba18a478c5319d506a003e5881badcec8842fa6dfe6c5d055e295d6a44f6c5e",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b08_repeated_diamonds",
+          "status": "built",
+          "binary": "b08_repeated_diamonds/b08_repeated_diamonds.elf",
+          "sha256": "2c679190e3cf87eabd96ad96a7ec3884b8dec348f46eb56df8d6dfb1d552a90c",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b09_fake_loop_exit",
+          "status": "built",
+          "binary": "b09_fake_loop_exit/b09_fake_loop_exit.elf",
+          "sha256": "2aa3e8f76009d4621de20e6c1629c83c792db6e58c39306087641b625f19f28d",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b10_checksum_invariant",
+          "status": "built",
+          "binary": "b10_checksum_invariant/b10_checksum_invariant.elf",
+          "sha256": "d48e4db7b7fea18e3ac69e0e46e1139378fb2a3dc8dfda178e994ea63fae7860",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b11_mutually_exclusive_guards",
+          "status": "built",
+          "binary": "b11_mutually_exclusive_guards/b11_mutually_exclusive_guards.elf",
+          "sha256": "3950bbc820a2316f4388c0c794744cac2d41f09936c1668e1656bb3cc48a070c",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b12_lockstep_counters",
+          "status": "built",
+          "binary": "b12_lockstep_counters/b12_lockstep_counters.elf",
+          "sha256": "3be1494d5e4ebca37c671ae4f946d1e9d2efcc9b1a8fc15fafc844409ca75113",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        },
+        {
+          "case": "b13_compound_deception",
+          "status": "built",
+          "binary": "b13_compound_deception/b13_compound_deception.elf",
+          "sha256": "25886e79d597c9e07fb39cd232afda885981df4a82def3755bad77d51a55707c",
+          "flags": [
+            "-O0",
+            "-g",
+            "-gdwarf-4",
+            "-std=gnu11",
+            "-mcpu=arm7tdmi",
+            "-marm",
+            "-mfloat-abi=soft",
+            "-ffreestanding",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-lto",
+            "-fno-jump-tables"
+          ]
+        }
+      ]
+    }
+  ]
+}
